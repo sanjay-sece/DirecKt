@@ -26,10 +26,6 @@ mongoose.connect(uri,{
   console.log(err); 
 })
 
-// mongoose.connect("mongodb://127.0.0.1:27017/Direct").then(() => {
-//   console.log("Connected to DB");
-// });
-
 app.use('/user',router);
 app.use('/customer',router);
 app.use('/customer',Threadrouter);
