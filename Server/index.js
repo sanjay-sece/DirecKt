@@ -3,7 +3,7 @@ let app = express();
 const mongoose = require("mongoose");
 let cors = require('cors');
 
-
+require('dotenv').config()
 const router = require('./Controllers/login')
 const Threadrouter = require('./Controllers/thread')
 
@@ -15,8 +15,8 @@ app.use(cors({orgin:["http://localhost:5000/"],credentials:true}));
 
 
 app.use('/public/images',express.static('public/images'))
-const uri = "mongodb+srv://sanjaykn2021cseb:Z5PuYsHLfLMS3nxe@cluster0.gc9u8kq.mongodb.net/"; 
-
+const uri = process.env.URI
+// console.log(uri)
 mongoose.connect(uri,{
     useNewUrlParser:true,
     useUnifiedTopology:true
