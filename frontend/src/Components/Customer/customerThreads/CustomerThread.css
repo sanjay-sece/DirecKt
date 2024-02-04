@@ -1,0 +1,11 @@
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input {
+    margin: 1px solid black;
+}
+.background-radial-gradient {
+    background-color: hsl(219, 100%, 44%);
+  }
